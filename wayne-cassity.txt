@@ -1,1 +1,3 @@
 Added this file for Reference and Notes. 
+
+- completed installs 
