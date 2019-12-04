@@ -1,3 +1,6 @@
 Added this file for Reference and Notes. 
 
-- completed installs 
+Commits:
+ - initial
+ - completed installs 
+ - setup quokka, completed example
