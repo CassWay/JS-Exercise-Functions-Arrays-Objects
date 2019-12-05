@@ -64,9 +64,9 @@ console.log(makePersonObject(5, 'Leia', 'leia@leia.com'));
  * the returned value should look like `Hello, my name is Leia`.
 */
 
-function getName(anyObject) {
+function getName(obj) {
   
-  return `Hello, my name is + ${Object.name}` ;
+  return `Hello, my name is + ${obj.name}` ;
 }
 
 /**
@@ -151,7 +151,9 @@ function get3rdCar(inventory) {
  * it will return `This is a Lincoln Navigator`.
 */
 function getCarInfoByIndex(inventory, index) {
-
+  const car = inventory.find((item, index) => {
+    return index === index;
+  });
   return `This is a + ${inventory[index].car_make} + ${inventory[index].car_model}` ;
 
 }
@@ -168,7 +170,7 @@ function getCarInfoByIndex(inventory, index) {
  * it will return `This is a Lincoln Town Car`.
 */
 function getLastCarInfo(inventory) {
-
+  let car = inventory[inventory.length - 1];
   return `This is a + ${inventory[inventory.length - 1].car_make} + ${inventory[inventory.length - 1].car_model}` ;
 }
 
@@ -186,6 +188,11 @@ function getLastCarInfo(inventory) {
 */
 function getCarInfoById(inventory, id) {
 
+  for (let i = 0; i < inventory.length; i++){
+      if (inventory[i] === inventory[inventory.length - 1]){
+        console.log(inventory[i]);
+      }
+  }
   return `This is a + ${inventory[id - 1].car_make} + ${inventory[id - 1].car_model}`;
   
 }
@@ -198,8 +205,22 @@ function getCarInfoById(inventory, id) {
  *     (1) an array which is an inventory of cars like the one inside /data/inventory.js.
  * sortCarInventory returns an inventory that is sorted by car_model, ascending [A-Z].
 */
-function sortCarInventory(/* code here */) {
-  /* code here */
+function sortCarInventory(inventory) {
+  let sortedInventory = []
+  let newFullArray = []
+  for (let i = 0; i < inventory.length; i++) {
+    sortedInventory.push(inventory[i].car_model) ;
+  }
+  sortedInventory = sortedInventory.sort()
+  for (let w = 0; w < sortedInventory.length; w++) {
+    for (let y = 0; y < inventory.length; y++) {
+      if (sortedInventory[w] === inventory[y].car_model) {
+        newFullArray.push(inventory[y]) ;
+        y = inventory.length ;
+      }
+    }
+  }
+  return newFullArray ;
 }
 
 /**
@@ -211,8 +232,13 @@ function sortCarInventory(/* code here */) {
  *     (1) an array which is an inventory of cars like the one inside /data/inventory.js.
  * getModelYears returns an array containing all the 'car_year's in the inventory.
 */
-function getModelYears(/* code here */) {
-  /* code here */
+function getModelYears(inventory) {
+  let carYears = [] ;
+  for (let i = 0; i < inventory.length; i++) {
+    const year = inventory[i].car_year;
+    carYears.push(inventory[i].car_year)
+  }
+  return carYears;
 }
 
 /**
@@ -227,8 +253,15 @@ function getModelYears(/* code here */) {
  * with a `car_year` which is at most the given desired max year,
  * in the same order as they appear in the original inventory.
 */
-function getOlderCars(/* code here */) {
-  /* code here */
+function getOlderCars(inventory, maxYear) {
+  let newArray = [];
+  for (let i = 0; i < inventory.length; i++) {
+    if (inventory[i].car_year <= maxYear) {
+    newArray.push(inventory[i]);
+
+    }
+  }
+  return newArray ;
 }
 
 /**
@@ -242,8 +275,16 @@ function getOlderCars(/* code here */) {
  * made by either `Audi` or `Mercedes-Benz` or `Volkswagen` or `BMW`,
  * in the same order as they appear in the original inventory.
 */
-function getGermanCars(/* code here */) {
-  /* code here */
+function getGermanCars(inventory) {
+  let germanCars = [];
+  let germanMakes = [`Audi`, `Mercedes-Benz`, `Volkswagen`, `BMW`];
+
+  for (let i = 0; i < inventory.length; i++) {
+    if (germanMakes.includes(inventory[i].car_make)) {
+      germanCars.push(inventory[i])
+    }
+  }
+  return germanCars;
 }
 
 /**
@@ -264,9 +305,15 @@ function getGermanCars(/* code here */) {
  *   return num * 2
  * }
 */
-const sum = null; // code here!
-const addFive = null; // code here!
-const argTimesTwo = null; // code here!
+const sum = (a, b) => {
+  return a + b;
+} 
+const addFive = (num) => {
+  return num + 5;
+}
+const argTimesTwo = (num) => {
+  return num * 2;
+}
 
 /**
  * ### Challenge `carMaker`
