@@ -1,0 +1,13 @@
+Added this file for Reference and Notes. 
+
+Commits:
+ - initial
+ - completed installs 
+ - setup quokka, completed example
+ - completed upto smartperson -- overthinking & making harder than is/could be
+ - completed getcarInfoByIndex & getLastCarInfo -- relax into it
+ - adjusted quotes to back-tic for proper interpolation ( ` ), completed upto getCarInfoById -- keep it simple
+ - restarted test:watch 3x = misc errors, adjusted for loops, 
+ - restarted test:watch 3x; adjusted syntax, completed upto refactor -- picked-up kid from drama production, -- take more breaks & do not stress over the test:watch
+ - completed all + Stretch; getName now failing -- review code and restart server
+ - Reviwed Code; changed getName to "Hello, my name is " + obj.name ; restarted server - ALL PASSED!!
