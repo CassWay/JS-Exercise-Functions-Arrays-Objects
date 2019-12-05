@@ -66,7 +66,7 @@ console.log(makePersonObject(5, 'Leia', 'leia@leia.com'));
 
 function getName(anyObject) {
   
-  return "Hello, my name is " + Object.name ;
+  return `Hello, my name is + ${Object.name}` ;
 }
 
 /**
@@ -152,7 +152,7 @@ function get3rdCar(inventory) {
 */
 function getCarInfoByIndex(inventory, index) {
 
-  return "This is a" + inventory[index].car_make + inventory[index].car_model ;
+  return `This is a + ${inventory[index].car_make} + ${inventory[index].car_model}` ;
 
 }
 
@@ -168,8 +168,8 @@ function getCarInfoByIndex(inventory, index) {
  * it will return `This is a Lincoln Town Car`.
 */
 function getLastCarInfo(inventory) {
-  
-  return "This is a" + inventory[inventory.length - 1].car_make + inventory[inventory.length - 1].car_model ;
+
+  return `This is a + ${inventory[inventory.length - 1].car_make} + ${inventory[inventory.length - 1].car_model}` ;
 }
 
 /**
@@ -184,8 +184,10 @@ function getLastCarInfo(inventory) {
  * For example, if getCarInfoById is invoked with the inventory and the number 1,
  * it will return `This is a Lincoln Navigator`.
 */
-function getCarInfoById(/* code here */) {
-  /* code here */
+function getCarInfoById(inventory, id) {
+
+  return `This is a + ${inventory[id - 1].car_make} + ${inventory[id - 1].car_model}`;
+  
 }
 
 /**

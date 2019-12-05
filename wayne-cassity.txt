@@ -6,3 +6,4 @@ Commits:
  - setup quokka, completed example
  - completed upto smartperson -- overthinking & making harder than is/could be
  - completed getcarInfoByIndex & getLastCarInfo -- relax into it
+ - adjusted quotes to back-tic for proper interpolation ( ` ), completed upto getCarInfoById -- keep it simple
