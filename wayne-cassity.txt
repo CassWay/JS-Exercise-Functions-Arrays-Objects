@@ -10,3 +10,4 @@ Commits:
  - restarted test:watch 3x = misc errors, adjusted for loops, 
  - restarted test:watch 3x; adjusted syntax, completed upto refactor -- picked-up kid from drama production, -- take more breaks & do not stress over the test:watch
  - completed all + Stretch; getName now failing -- review code and restart server
+ - Reviwed Code; changed getName to "Hello, my name is " + obj.name ; restarted server - ALL PASSED!!

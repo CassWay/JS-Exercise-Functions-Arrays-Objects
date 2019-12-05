@@ -66,7 +66,7 @@ console.log(makePersonObject(5, 'Leia', 'leia@leia.com'));
 
 function getName(obj) {
   
-  return `Hello, my name is + ${obj.name}` ;
+  return "Hello, my name is " + obj.name ;
 }
 
 /**
